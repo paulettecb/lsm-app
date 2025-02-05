@@ -79,7 +79,10 @@ export class LsmAvatarComponent implements OnInit {
 
   private async loadAvatar() {
     const loader = new GLTFLoader();
-    loader.load('assets/avatar.glb', (gltf) => {
+    const avatarPath = window.location.pathname.includes('lsm-app')
+      ? '/lsm-app/assets/avatar.glb'
+      : '/assets/avatar.glb';
+    loader.load(avatarPath, (gltf) => {
       this.avatar = gltf.scene;
       this.scene.add(this.avatar);
       this.extractSkeleton();
