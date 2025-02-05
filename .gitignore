@@ -1,0 +1,17 @@
+# Node.js y Angular
+node_modules/
+.angular/
+dist/
+package-lock.json
+npm-debug.log
+yarn-error.log
+
+# Configuración del sistema
+.DS_Store
+Thumbs.db
+
+# Configuración personal y de desarrollo
+.env
+.idea/
+.vscode/
+*.log

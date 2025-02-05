@@ -1,0 +1,18 @@
+<div class="container">
+    <div class="header">
+      <h1>Lengua de Señas Mexicana</h1>
+    </div>
+    <div class="content">
+      <canvas #threeCanvas></canvas>
+      
+      <div class="controls">
+        <h2>Selecciona una seña:</h2>
+        <div class="buttons">
+          <button *ngFor="let sign of signs" (click)="loadSign(sign)">{{ sign.nombre }}</button>
+          <video #video autoplay playsinline></video>
+        </div>
+        <canvas #handCanvas width="640" height="480" style="position: absolute; left: 0; top: 14rem; z-index: 10;"></canvas>
+        <canvas #poseCanvas ></canvas>
+      </div>
+    </div>
+  </div>
